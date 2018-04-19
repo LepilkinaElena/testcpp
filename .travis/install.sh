@@ -27,7 +27,7 @@ if [[ "$(uname -s)" == 'Linux' ]]; then
     CXX=$CXX_COMPILER
 fi
 
-pip install --upgrade pip
-pip install conan
+python -m pip install --upgrade pip
+python -m pip install conan
 
 conan user
