@@ -1,10 +1,8 @@
 language: cpp
-
+install:
+  - ./.travis/install.sh
 script:
-  - mkdir build && cd build
-  - cmake .. -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DCMAKE_CXX_COMPILER=$COMPILER
-  - cmake --build .
-  - ./hello
+  - ./.travis/run.sh
 
 env:
   - BUILD_TYPE=Release COMPILER=g++-4.9

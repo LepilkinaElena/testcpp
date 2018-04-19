@@ -2,6 +2,10 @@ cmake_minimum_required(VERSION 3.0)
 
 project(hello CXX)
 
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
+
 set(${PROJECT_NAME}_SRC
 	src/main.cpp
 )
