@@ -7,7 +7,7 @@ conan_basic_setup()
 target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
 
 set(${PROJECT_NAME}_SRC
-	src/main.cpp
+	src/hello.cpp
 )
 
 add_executable(${PROJECT_NAME} ${${PROJECT_NAME}_SRC})
